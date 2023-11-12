@@ -6,6 +6,7 @@ import { columns } from '../Utils/columnsConstants';
 import { checkLabelForRendering } from '../Functions/TableFunctions';
 import { CountryFlags } from '../Types/CountryTypes';
 import { putPage, putRowsPerPage } from '../Reducers/pagesReducer';
+import MenuTable from './MenuTable';
 
 const CountriesTable = () => {
 	const allCountries = useAppSelector(state => state.allCountriesReducer);
@@ -26,8 +27,8 @@ const CountriesTable = () => {
 	};
 
 	return (
-		<Grid container sx={{ maxWidth: '80%', display: 'flex', justifyContent: 'center' }}>
-			<Grid >
+		<Grid container sx={{ width: '100%'}}>
+			<Grid mobileS={12}>
 				{/* <SearchAndFilter {...countries} /> */}
 				<Paper sx={{ width: '100%', minHeight: '300px', overflow: 'hidden', marginTop: '20px' }}>
 					<TableContainer sx={{ maxHeight: 540 }}>
@@ -41,7 +42,7 @@ const CountriesTable = () => {
 											align={column.align}
 										>
 											{column.label}
-											{/* {checkLabelForRendering(column.label) && <MenuTable label={column.label} />} */}
+											{checkLabelForRendering(column.label) && <MenuTable label={column.label} />}
 										</TableCell>
 									))}
 								</TableRow>

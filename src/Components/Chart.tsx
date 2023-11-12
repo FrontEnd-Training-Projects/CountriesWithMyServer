@@ -37,9 +37,9 @@ const Chart = () => {
 		}
 		return null;
 	};
-	console.log(allCountries)
+	
 	return (
-		<ResponsiveContainer width="80%" height="30%">
+		<ResponsiveContainer width="100%" height="30%">
 			<AreaChart data={data}>
 				<XAxis dataKey="name"
 					tick={{ stroke: 'rgb(154 169 175)', strokeWidth: 0.5 }}

@@ -1,0 +1,1 @@
+export const optionsMenu = ["Sort ascending", "Sort descending"];

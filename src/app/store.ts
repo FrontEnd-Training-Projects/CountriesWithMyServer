@@ -1,12 +1,14 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
 import { allCountriesReducer } from '../Reducers/allCountriesReducer';
 import { pagesReducer } from '../Reducers/pagesReducer';
+import { dataforSortingReducer } from '../Reducers/dataforSortingReducer';
 
 
 export const store = configureStore({
 	reducer: {
 		allCountriesReducer: allCountriesReducer,
 		pagesReducer: pagesReducer,
+		dataforSortingReducer: dataforSortingReducer
 	},
 });
 
